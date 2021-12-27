@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  rclone_server:
+    image: mu-777:rclone
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./rclone:/opt/rclone
+    ports:
+      - 53682:53682
